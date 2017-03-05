@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+
+<a href="/todos/create_todo" class="btn btn-default">Nouvelle todo</a>
+<table class="table table-striped"> 
+<thead> <tr>  <th>Nom de la todo</th> <th>Description</th>  <th></th></th></tr> </thead> 
+<tbody> 
+
+	 {% for todo in todos %}
+        <tr>  
+            <td>{{todo.titre}}</td> <td>{{todo.description}}</td> <td><button class="btn btn-default">Modifier</button><button class="btn btn-danger">Supprimer</button> </td>
+        </tr> 
+     {% endfor %}
+
+</tbody> 
+</table>
+	
+{% endblock %}
+
+
+

@@ -1,0 +1,6 @@
+todo_homepage:
+    path:     /todos
+    defaults: { _controller: TodoBundle:Default:index }
+todo_create_todo:
+    path:     /create/todo
+    defaults: { _controller: TodoBundle:Default:createTodo }
