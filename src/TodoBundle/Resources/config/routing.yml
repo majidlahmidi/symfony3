@@ -1,6 +1,23 @@
+todo_todo:
+    resource: "@TodoBundle/Resources/config/routing/todo.yml"
+    prefix:   /todos
+
 todo_homepage:
-    path:     /todos
+    path:     /
     defaults: { _controller: TodoBundle:Default:index }
-todo_create_todo:
-    path:     /create/todo
-    defaults: { _controller: TodoBundle:Default:createTodo }
+
+todo_voir:
+    path:     /todo/voir/{id}
+    defaults: { _controller: TodoBundle:Default:voirTodo }
+
+todo_editer:
+    path:     /todo/editer/{id}
+    defaults: { _controller: TodoBundle:Default:editerTodo }
+
+todo_creer:
+    path:     /todo/creer
+    defaults: { _controller: TodoBundle:Default:creerTodo }
+
+todo_supprimer:
+    path:     /todo/supprimer/{id}
+    defaults: { _controller: TodoBundle:Default:supprimerTodo }

@@ -26,7 +26,7 @@ class DefaultController extends Controller
         	   );
     }
 
-    public function createTodoAction(Request $request)
+    public function creerTodoAction(Request $request)
     {
         // create a task and give it some dummy data for this example
         $todo = new Todo();
@@ -44,9 +44,27 @@ class DefaultController extends Controller
         ));
     }
 
-    public function saveTodoAction(Request $request)
+    public function voirTodoAction(Todo $todo)
     {
-    	print_r($request);
+
+    	return $this->render('TodoBundle:Default:voirTodo.html.twig', array(
+            'todo' => $todo
+        ));
+
+    }
+
+    public function editerTodoAction(Todo $todo)
+    {
+
+    	//print_r($todo);
+    	return $this->render('TodoBundle:Default:editerTodo.html.twig', array(
+            'form' => $form->createView()
+        ));
+
+    }
+
+    public function supprimerTodoAction($id)
+    {
 
     }
 

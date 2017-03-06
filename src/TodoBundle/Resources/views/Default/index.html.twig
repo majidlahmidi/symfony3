@@ -10,7 +10,10 @@
 
 	 {% for todo in todos %}
         <tr>  
-            <td>{{todo.titre}}</td> <td>{{todo.description}}</td> <td><button class="btn btn-default">Modifier</button><button class="btn btn-danger">Supprimer</button> </td>
+            <td>{{todo.titre}}</td> <td>{{todo.description}}</td> 
+            <td><a href="{{ path('todo_editer', { 'id': todo.id }) }}" class="btn btn-default">Modifier</a>
+<a href="{{ path('todo_voir', { 'id': todo.id }) }}" class="btn btn-default">Voir</a>
+            	<a href="{{ path('todo_supprimer', { 'id': todo.id }) }}" class="btn btn-danger">Supprimer</a> </td>
         </tr> 
      {% endfor %}
 

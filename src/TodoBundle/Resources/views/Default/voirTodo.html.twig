@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ todo.titre }}{% endblock %}
+	
+{% block content %}
+
+<div class="page-header">{{ todo.titre }}</div>
+Description : {{ todo.description }}<br />
+Priorité : {{ todo.priorite }}<br />
+Catégorie : {{ todo.categorie }}
+{% endblock %}
